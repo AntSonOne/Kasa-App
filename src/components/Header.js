@@ -1,5 +1,11 @@
+import "../styles/Header.css";
+
 function Header() {
-  return <h1>Kasa app</h1>;
+  return (
+    <header>
+      <h1>KASA</h1>
+    </header>
+  );
 }
 
 export default Header;
