@@ -1,5 +1,6 @@
 import "./Header.scss";
-import logo from "../../img/logo-salmon.png";
+import logo from "../../assets/img/logo-salmon.png";
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -12,13 +13,10 @@ function Header() {
           </a>
         </div>
         <div className="navigation">
-          <a href="#">
-            <p>Accueil</p>
-          </a>
-          <a href="#">
-            <p>À propos</p>
-          </a>
         </div>
+        {/* TODO make this work  */}
+        {/* <Link to="/home">Accueil</Link>
+        <Link to="/about">À propos</Link> */}
       </nav>
     </header>
   );

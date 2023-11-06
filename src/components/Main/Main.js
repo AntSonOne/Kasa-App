@@ -5,12 +5,12 @@ import "./Main.scss";
 
 function Main() {
   return (
-    <main>
+    <div>
       <Banner />
       <div>
         <CardList />
       </div>
-    </main>
+    </div>
   );
 }
 
