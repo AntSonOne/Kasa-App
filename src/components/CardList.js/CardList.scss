@@ -1,0 +1,10 @@
+.cardsGrid {
+    background-color: #f6f6f6;
+    padding: 56px 50px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 50px;
+  }
