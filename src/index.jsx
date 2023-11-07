@@ -13,18 +13,18 @@ import Footer from "./components/Footer/Footer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Header />
-    <main>
-      <Router>
+    <Router>
+      <Header />
+      <main>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/notfound" element={<NotFound />} />
+          <Route path="/404" element={<NotFound />} />
           <Route path="/housing" element={<Housing />} />
         </Routes>
-      </Router>
-    </main>
-    <Footer />
+      </main>
+      <Footer />
+    </Router>
   </React.StrictMode>
 );
 

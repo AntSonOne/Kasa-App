@@ -1,14 +1,13 @@
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../../assets/img/banner.png);
   background-size: cover;
   background-position: center;
-  padding: 77px;
+  min-height: 223px;
   border-radius: 25px;
   margin-bottom: 43px;
 }
 
 .banner p {
+  padding: 82.5px;
   font-size: 48px;
   font-weight: 500;
   color: white;
