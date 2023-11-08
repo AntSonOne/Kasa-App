@@ -3,6 +3,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Tag from "../../components/Tag/Tag";
 import housings from "../../logements.json";
+import styles from "./Housing.module.scss";
 
 function Housing(props) {
   const id = props.id;
@@ -16,8 +17,10 @@ function Housing(props) {
       <div>Renter</div>
       <div>Rate</div>
       <Tag />
-      <Dropdown />
-      <Dropdown />
+      <div className={styles.dropdownList}>
+        <Dropdown />
+        <Dropdown />
+      </div>
     </div>
   );
 }

@@ -5,19 +5,17 @@ function Dropdown(props) {
   const description = props.description;
 
   return (
+    <div className="dropdown">
+      <p onClick={() => displayDescription(description)}>{title}</p>
+    </div>
+  );
+}
+
+function displayDescription(description) {
+  //TODO fix this
+  return (
     <div>
-      <h1
-        onClick={function handleClick() {
-          const description = document.getElementsByClassName(
-            ".dropdownDescription"
-          );
-        }}
-      >
-        {title}
-      </h1>
-      <div className="dropdownDescription">
-        <p>{description}</p>
-      </div>
+      <p>{description}</p>
     </div>
   );
 }
