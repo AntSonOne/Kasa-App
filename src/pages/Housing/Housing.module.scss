@@ -2,3 +2,16 @@
     display: flex;
     gap: 10px;
 }
+
+.housingInfos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profilePicture{
+    height: 64px;
+    width: 64px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+}
