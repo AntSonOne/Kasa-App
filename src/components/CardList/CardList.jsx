@@ -9,7 +9,7 @@ function CardList() {
   return (
     <ul className="cardsGrid">
       {housings.map((housing) => (
-        <Link to={path + housing.id}>
+        <Link to={path + housing.id} key={housing.id}>
           <Card
             key={housing.id}
             id={housing.id}

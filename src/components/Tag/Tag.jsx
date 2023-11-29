@@ -1,12 +1,11 @@
 import "./Tag.scss";
 
 function Tag(props) {
-  const tags = props.tags;
+  const tag = props.tag;
+
   return (
     <div className="tagsList">
-      {tags.map((tag) => (
-        <p className="tag">{tag}</p>
-      ))}
+      <p className="tag">{tag}</p>
     </div>
   );
 }

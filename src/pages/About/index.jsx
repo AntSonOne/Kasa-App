@@ -11,7 +11,11 @@ function About() {
       <Banner text={null} image={bannerAbout} />
       <ul className={styles.dropdownList}>
         {abouts.map((about) => (
-          <Dropdown title={about.title} description={about.description} />
+          <Dropdown
+            key={about.id}
+            title={about.title}
+            description={about.description}
+          />
         ))}
       </ul>
     </div>

@@ -13,6 +13,7 @@ function Dropdown(props) {
 
 function displayDescription(description) {
   //TODO fix this
+  console.log(description);
   return (
     <div>
       <p>{description}</p>

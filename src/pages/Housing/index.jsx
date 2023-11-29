@@ -9,6 +9,7 @@ import housings from "../../logements.json";
 function Housing() {
   const { id } = useParams();
   const housing = housings.find((housing) => housing.id === id);
+
   return (
     <div>
       <Carousel pictures={housing.pictures} />
@@ -16,7 +17,11 @@ function Housing() {
         <div>
           <h1>{housing.title}</h1>
           <p>{housing.location}</p>
-          <Tag className={styles.dropdownList} tags={housing.tags} />
+          <ul className={styles.dropdownList}>
+            {housing.tags.map((tag) => (
+              <Tag tag={tag} key={housing.id + Math.random()} />
+            ))}
+          </ul>
         </div>
         <div>
           <div>
