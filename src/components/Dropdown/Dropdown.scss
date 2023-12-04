@@ -1,11 +1,22 @@
 .dropdown{
     width: 100%;
-    background-color: #ff6060;
+}
+
+.dropdownTitle{
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff6060;
     p{
         font-size: 18px;
         font-weight: 500;
         color: white;
     }
+    i{
+        color: white
+    };
+}
+.dropdownDescription{
+    padding: 10px;
 }

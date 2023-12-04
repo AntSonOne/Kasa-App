@@ -1,22 +1,27 @@
 import "./Dropdown.scss";
+import { useState } from "react";
 
 function Dropdown(props) {
   const title = props.title;
   const description = props.description;
+  const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div className="dropdown">
-      <p onClick={() => displayDescription(description)}>{title}</p>
+  return isOpen ? (
+    <div onClick={() => setIsOpen(false)} className="dropdown">
+      <div className="dropdownTitle">
+        <p>{title}</p>
+        <i className="fa-solid fa-chevron-up"></i>
+      </div>
+      <div className="dropdownDescription">
+        <p>{description}</p>
+      </div>
     </div>
-  );
-}
-
-function displayDescription(description) {
-  //TODO fix this
-  console.log(description);
-  return (
-    <div>
-      <p>{description}</p>
+  ) : (
+    <div onClick={() => setIsOpen(true)} className="dropdown">
+      <div className="dropdownTitle">
+        <p>{title}</p>
+        <i className="fa-solid fa-chevron-down"></i>
+      </div>
     </div>
   );
 }
