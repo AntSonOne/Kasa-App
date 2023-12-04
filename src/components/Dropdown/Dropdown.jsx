@@ -13,7 +13,13 @@ function Dropdown(props) {
         <i className="fa-solid fa-chevron-up"></i>
       </div>
       <div className="dropdownDescription">
-        <p>{description}</p>
+        <p>
+          {typeof description === "string"
+            ? description
+            : description.map((d) => {
+                return <p>{d}</p>;
+              })}
+        </p>
       </div>
     </div>
   ) : (
