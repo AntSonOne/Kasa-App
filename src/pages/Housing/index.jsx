@@ -9,6 +9,24 @@ import housings from "../../logements.json";
 function Housing() {
   const { id } = useParams();
   const housing = housings.find((housing) => housing.id === id);
+  const stars = [];
+  const emptyStars = [];
+  for (let i = 0; i < housing.rating; i++) {
+    stars.push(
+      <i key={housing.id + Math.random()} className="fa-solid fa-star"></i>
+    );
+  }
+  if (stars.length < 5) {
+    const totalStars = 5 - stars.length;
+    for (let i = 0; i < totalStars; i++) {
+      emptyStars.push(
+        <i
+          key={housing.id + Math.random()}
+          className={"fa-solid fa-star " + styles.emptyStar}
+        ></i>
+      );
+    }
+  }
 
   return (
     <div>
@@ -29,10 +47,13 @@ function Housing() {
             <img
               className={styles.profilePicture}
               src={housing.host.picture}
-              alt="profile picture"
+              alt="landlord"
             />
           </div>
-          <div>{housing.rating}</div>
+          <div>
+            {stars}
+            {emptyStars}
+          </div>
         </div>
       </div>
       <div className={styles.dropdownList}>
