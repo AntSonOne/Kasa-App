@@ -5,14 +5,12 @@ function Card(props) {
   const title = props.title;
 
   return (
-    <div>
-      <div className={styles.cardBackground}>
-        <div className={styles.cardDetails}>
-          <div>
-            <img src={cover} alt={title} />
-          </div>
-          <p>{title}</p>
+    <div className={styles.cardBackground}>
+      <div className={styles.cardDetails}>
+        <div>
+          <img src={cover} alt={title} />
         </div>
+        <p>{title}</p>
       </div>
     </div>
   );
