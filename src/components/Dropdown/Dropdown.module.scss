@@ -1,0 +1,40 @@
+.dropdown{
+    width: 100%;
+}
+
+.dropdownTitle{
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ff6060;
+    p{
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+    }
+    i{
+        color: white;
+        padding: 0 10px;
+        transition: transform 1s;
+        &:hover{
+            transform: rotate(-180deg)
+        }
+    };
+}
+.dropdownDescription{
+    padding: 30px 20px 20px 20px;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    margin-top: -10px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+      }
+    100% {
+        transform: rotate(180deg)
+      }
+    }

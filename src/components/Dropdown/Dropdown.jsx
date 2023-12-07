@@ -1,5 +1,5 @@
-import "./Dropdown.scss";
 import { useState } from "react";
+import styles from "./Dropdown.module.scss";
 
 function Dropdown(props) {
   const title = props.title;
@@ -7,12 +7,15 @@ function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return isOpen ? (
-    <div onClick={() => setIsOpen(false)} className="dropdown">
-      <div className="dropdownTitle">
+    <div className={styles.dropdown}>
+      <div className={styles.dropdownTitle}>
         <p>{title}</p>
-        <i className="fa-solid fa-chevron-up"></i>
+        <i
+          onClick={() => setIsOpen(false)}
+          className={"fa-solid fa-chevron-down open"}
+        ></i>
       </div>
-      <div className="dropdownDescription">
+      <div className={styles.dropdownDescription}>
         <p>
           {typeof description === "string"
             ? description
@@ -23,10 +26,13 @@ function Dropdown(props) {
       </div>
     </div>
   ) : (
-    <div onClick={() => setIsOpen(true)} className="dropdown">
-      <div className="dropdownTitle">
+    <div className={styles.dropdown}>
+      <div className={styles.dropdownTitle}>
         <p>{title}</p>
-        <i className="fa-solid fa-chevron-down"></i>
+        <i
+          onClick={() => setIsOpen(true)}
+          className={"fa-solid fa-chevron-down"}
+        ></i>
       </div>
     </div>
   );

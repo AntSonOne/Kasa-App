@@ -1,11 +1,45 @@
+.dropdownList, .tagsList {
+    display: flex
+}
+
 .dropdownList{
-    display: flex;
+    gap: 76px;
+}
+
+.tagsList{
     gap: 10px;
 }
 
 .housingInfos{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.housingDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.housingTitle{
+    font-size: 36px;
+}
+
+.housingDescription{
+    font-size: 18px;
+}
+
+.hostDetails{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 21px;
+}
+
+.hostName{
+    max-width: 93px;
+    text-align: end;
 }
 
 .profilePicture{
@@ -16,6 +50,14 @@
     border-radius: 50%;
 }
 
+.stars{
+    text-align: end;
+    padding-bottom: 7px;
+    i {
+        padding: 0 2px;
+        font-size: 18px;
+    }
+}
 .emptyStar{
-    color: grey;
+    color: #E3E3E3;
 }

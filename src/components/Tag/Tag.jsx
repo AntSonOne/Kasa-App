@@ -4,7 +4,7 @@ function Tag(props) {
   const tag = props.tag;
 
   return (
-    <div className="tagsList">
+    <div>
       <p className="tag">{tag}</p>
     </div>
   );

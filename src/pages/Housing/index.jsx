@@ -32,25 +32,27 @@ function Housing() {
     <div>
       <Carousel pictures={housing.pictures} />
       <div className={styles.housingInfos}>
-        <div>
-          <h1>{housing.title}</h1>
-          <p>{housing.location}</p>
-          <ul className={styles.dropdownList}>
+        <div className={styles.housingDetails}>
+          <div>
+            <h1 className={styles.housingTitle}>{housing.title}</h1>
+            <p className={styles.housingDescription}>{housing.location}</p>
+          </div>
+          <ul className={styles.tagsList}>
             {housing.tags.map((tag) => (
               <Tag tag={tag} key={housing.id + Math.random()} />
             ))}
           </ul>
         </div>
         <div>
-          <div>
-            {housing.host.name}
+          <div className={styles.hostDetails}>
+            <p className={styles.hostName}>{housing.host.name}</p>
             <img
               className={styles.profilePicture}
               src={housing.host.picture}
               alt="landlord"
             />
           </div>
-          <div>
+          <div className={styles.stars}>
             {stars}
             {emptyStars}
           </div>
