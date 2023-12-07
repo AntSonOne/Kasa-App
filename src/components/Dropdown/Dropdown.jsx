@@ -12,7 +12,7 @@ function Dropdown(props) {
         <p>{title}</p>
         <i
           onClick={() => setIsOpen(false)}
-          className={"fa-solid fa-chevron-down open"}
+          className={"fa-solid fa-chevron-up open"}
         ></i>
       </div>
       <div className={styles.dropdownDescription}>
@@ -31,7 +31,7 @@ function Dropdown(props) {
         <p>{title}</p>
         <i
           onClick={() => setIsOpen(true)}
-          className={"fa-solid fa-chevron-down"}
+          className={"fa-solid fa-chevron-up"}
         ></i>
       </div>
     </div>

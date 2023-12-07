@@ -13,11 +13,13 @@
         font-size: 18px;
         font-weight: 500;
         color: white;
+        align-self: center;
     }
     i{
+        font-size: 32px;
         color: white;
         padding: 0 10px;
-        transition: transform 1s;
+        transition: transform 300ms;
         &:hover{
             transform: rotate(-180deg)
         }
