@@ -6,13 +6,13 @@ function Dropdown(props) {
   const description = props.description;
   const [isOpen, setIsOpen] = useState(false);
 
-  return isOpen ? (
-    <div className={styles.dropdown}>
+  return (
+    <div className={isOpen ? styles.dropdownOpen : styles.dropdown}>
       <div className={styles.dropdownTitle}>
         <p>{title}</p>
         <i
-          onClick={() => setIsOpen(false)}
-          className={"fa-solid fa-chevron-up open"}
+          onClick={() => (!isOpen ? setIsOpen(true) : setIsOpen(false))}
+          className={"fa-solid fa-chevron-up"}
         ></i>
       </div>
       <div className={styles.dropdownDescription}>
@@ -23,16 +23,6 @@ function Dropdown(props) {
                 return <p>{d}</p>;
               })}
         </p>
-      </div>
-    </div>
-  ) : (
-    <div className={styles.dropdown}>
-      <div className={styles.dropdownTitle}>
-        <p>{title}</p>
-        <i
-          onClick={() => setIsOpen(true)}
-          className={"fa-solid fa-chevron-up"}
-        ></i>
       </div>
     </div>
   );
