@@ -1,7 +1,7 @@
 .dropdown{
     width: 100%;
     .dropdownDescription{
-        visibility: collapse;
+        display: none;
     }
 }
 
@@ -36,7 +36,7 @@
     .dropdownDescription{ 
         animation: growDown 300ms;
         margin-top: -10px;
-        visibility: visible;
+        display: block;
         background-color: #F6F6F6;
         border-radius: 5px;
         padding: 30px 20px 20px 20px;
