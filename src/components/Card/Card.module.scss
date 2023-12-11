@@ -21,6 +21,18 @@
   p {
     color: white;
     font-size: 18px;
+    font-weight: 500;
     padding: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cardBackground {
+    height: 225px;
+  }
+  .cardDetails {
+    img{
+      height: 158px;
+    }
   }
 }

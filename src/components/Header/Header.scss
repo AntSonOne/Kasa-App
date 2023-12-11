@@ -11,8 +11,25 @@ header {
   }
   .navLink{
     font-size: 24px;
+    font-weight: 500;
     &:focus{
       text-decoration: underline;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  header {
+    margin-top: 20px;
+    padding: 0 20px;
+    img {
+      width:145px;
+      height: 46px;
+    }
+    .navigation{
+      gap: 26px;
+    }
+    .navLink{
+      font-size: 12px;
     }
   }
 }

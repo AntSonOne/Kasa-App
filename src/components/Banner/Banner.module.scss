@@ -3,7 +3,7 @@
   background-position: center;
   min-height: 223px;
   border-radius: 25px;
-  margin-bottom: 43px;
+  margin-bottom: 38px;
 }
 
 .banner p {
@@ -15,4 +15,22 @@
 
 .container {
   text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .banner {
+    min-height: 111px;
+    border-radius: 10px;
+    margin-bottom: 19px;
+  }
+  .banner p {
+    padding: 31px 16px;
+    font-size: 24px;
+  }
+  .container {
+    text-align: start;
+  }
+  .banner {
+    min-height: auto;
+  }
 }

@@ -1,6 +1,7 @@
 footer {
   padding: 66px 0 29px 0;
   background-color: black;
+  width: 100%;
 }
 
 .footerContent {
@@ -15,5 +16,21 @@ footer {
   img {
     color: white;
     width: 122px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    padding: 66px 0 58px 0;
+    .footerContent {
+      gap: 28px;
+      p {
+        width: 130px;
+        font-size: 12px;
+      }
+      img {
+        width: 122px;
+      }
+    }
   }
 }

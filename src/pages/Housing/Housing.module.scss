@@ -61,3 +61,46 @@
 .emptyStar{
     color: #E3E3E3;
 }
+
+@media screen and (max-width: 750px) {
+    .dropdownList {
+        flex-direction: column;
+    }
+    
+    .dropdownList{
+        gap: 20px;
+    }
+    
+    .housingInfos{
+        flex-direction: column;
+        margin-bottom: 13px;
+    }
+        
+    .housingDetails{
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+    
+    .housingTitle{
+        font-size: 18px;
+    }
+    
+    .housingDescription{
+        font-size: 14px;
+    }
+    
+    .hostDetails{
+        margin-bottom: 0px;
+    }
+    
+    .profilePicture{
+        height: 32px;
+        width: 32px;
+    }
+
+    .hostDetailsAndRate{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}

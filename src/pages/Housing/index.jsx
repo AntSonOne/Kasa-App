@@ -43,7 +43,7 @@ function Housing() {
             ))}
           </ul>
         </div>
-        <div>
+        <div className={styles.hostDetailsAndRate}>
           <div className={styles.hostDetails}>
             <p className={styles.hostName}>{housing.host.name}</p>
             <img

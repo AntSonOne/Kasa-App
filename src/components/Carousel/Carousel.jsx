@@ -20,17 +20,25 @@ function Carousel(props) {
             index <= 0 ? updateIndex(lastPictureIndex) : updateIndex(index - 1);
           }}
         >
-          <i className="fa-solid fa-chevron-left"></i>
+          <i
+            className={
+              lastPicture === 1 ? "hideItem" : "fa-solid fa-chevron-left"
+            }
+          ></i>
         </div>
         <div
           onClick={() => {
             index >= lastPictureIndex ? updateIndex(0) : updateIndex(index + 1);
           }}
         >
-          <i className="fa-solid fa-chevron-right"></i>
+          <i
+            className={
+              lastPicture === 1 ? "hideItem" : "fa-solid fa-chevron-right"
+            }
+          ></i>
         </div>
       </div>
-      <div className="picturesCounter">
+      <div className={lastPicture === 1 ? "hideItem" : "picturesCounter"}>
         {index + 1}/{lastPicture}
       </div>
     </div>

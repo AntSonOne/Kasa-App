@@ -1,9 +1,19 @@
 .cardsGrid {
-    background-color: #f6f6f6;
-    padding: 56px 50px;
-    border-radius: 25px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 60px;
-    row-gap: 50px;
+  background-color: #f6f6f6;
+  padding: 56px 50px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 60px;
+  row-gap: 50px;
+}
+
+@media screen and (max-width: 750px) {
+  .cardsGrid {
+    background-color: transparent;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
   }
+}
