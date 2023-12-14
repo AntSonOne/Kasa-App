@@ -3,7 +3,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Tag from "../../components/Tag/Tag";
 import styles from "./Housing.module.scss";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import housings from "../../logements.json";
 import { Navigate } from "react-router-dom";
 
@@ -12,7 +12,6 @@ function Housing() {
   const housing = housings.find((housing) => housing.id === id);
   const stars = [];
   const emptyStars = [];
-  const navigate = useNavigate();
 
   for (let i = 0; i < housing.rating; i++) {
     stars.push(
@@ -31,7 +30,7 @@ function Housing() {
     }
   }
 
-  return !housing ? (
+  return housing === undefined ? (
     <Navigate replace to="/404" />
   ) : (
     <div>
