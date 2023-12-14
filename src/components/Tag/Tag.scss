@@ -1,8 +1,10 @@
 .tag{
+    display: inline-block;
     padding: 3px 22px;
     border-radius: 25px;
     background-color: #FF6060;
-    color: white;
+    color: #ffffff;
+    margin: 10px 10px 0 0;
 }
 
 @media screen and (max-width:750px) {

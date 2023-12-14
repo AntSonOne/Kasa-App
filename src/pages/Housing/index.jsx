@@ -3,14 +3,17 @@ import Carousel from "../../components/Carousel/Carousel";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Tag from "../../components/Tag/Tag";
 import styles from "./Housing.module.scss";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import housings from "../../logements.json";
+import { Navigate } from "react-router-dom";
 
 function Housing() {
   const { id } = useParams();
   const housing = housings.find((housing) => housing.id === id);
   const stars = [];
   const emptyStars = [];
+  const navigate = useNavigate();
+
   for (let i = 0; i < housing.rating; i++) {
     stars.push(
       <i key={housing.id + Math.random()} className="fa-solid fa-star"></i>
@@ -28,7 +31,9 @@ function Housing() {
     }
   }
 
-  return (
+  return !housing ? (
+    <Navigate replace to="/404" />
+  ) : (
     <div>
       <Carousel pictures={housing.pictures} />
       <div className={styles.housingInfos}>
@@ -37,7 +42,7 @@ function Housing() {
             <h1 className={styles.housingTitle}>{housing.title}</h1>
             <p className={styles.housingDescription}>{housing.location}</p>
           </div>
-          <ul className={styles.tagsList}>
+          <ul>
             {housing.tags.map((tag) => (
               <Tag tag={tag} key={housing.id + Math.random()} />
             ))}

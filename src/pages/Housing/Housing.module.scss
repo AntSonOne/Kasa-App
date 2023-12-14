@@ -1,13 +1,6 @@
-.dropdownList, .tagsList {
-    display: flex
-}
-
 .dropdownList{
+    display: flex;
     gap: 76px;
-}
-
-.tagsList{
-    gap: 10px;
 }
 
 .housingInfos{
@@ -102,5 +95,5 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-    }
+    } 
 }
