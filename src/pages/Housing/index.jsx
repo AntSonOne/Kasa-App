@@ -1,17 +1,20 @@
+import { Navigate, useParams } from "react-router-dom";
 import "../../assets/styles/App.scss";
 import Carousel from "../../components/Carousel/Carousel";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Tag from "../../components/Tag/Tag";
-import styles from "./Housing.module.scss";
-import { useParams } from "react-router-dom";
 import housings from "../../logements.json";
-import { Navigate } from "react-router-dom";
+import styles from "./Housing.module.scss";
 
 function Housing() {
   const { id } = useParams();
   const housing = housings.find((housing) => housing.id === id);
   const stars = [];
   const emptyStars = [];
+
+  if (housing === undefined) {
+    return <Navigate to="/notfound" replace={true} />;
+  }
 
   for (let i = 0; i < housing.rating; i++) {
     stars.push(
@@ -30,9 +33,7 @@ function Housing() {
     }
   }
 
-  return housing === undefined ? (
-    <Navigate replace to="/404" />
-  ) : (
+  return (
     <div>
       <Carousel pictures={housing.pictures} />
       <div className={styles.housingInfos}>
