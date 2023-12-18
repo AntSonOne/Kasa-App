@@ -5,13 +5,18 @@ function Card(props) {
   const title = props.title;
 
   return (
-    <div className={styles.cardBackground}>
-      <div className={styles.cardDetails}>
-        <div>
-          <img src={cover} alt={title} />
-        </div>
-        <p>{title}</p>
-      </div>
+    <div
+      className={styles.cardBackground}
+      style={{
+        backgroundImage: `
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+            ), url(${cover})`,
+      }}
+    >
+      <p>{title}</p>
     </div>
   );
 }
