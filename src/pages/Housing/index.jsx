@@ -3,7 +3,7 @@ import "../../assets/styles/App.scss";
 import Carousel from "../../components/Carousel/Carousel";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Tag from "../../components/Tag/Tag";
-import housings from "../../logements.json";
+import housings from "../../data/logements.json";
 import styles from "./Housing.module.scss";
 
 function Housing() {

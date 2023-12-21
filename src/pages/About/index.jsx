@@ -2,7 +2,7 @@ import "../../assets/styles/App.scss";
 import Banner from "../../components/Banner/Banner";
 import bannerAbout from "../../assets/img/banner-about.jpg";
 import Dropdown from "../../components/Dropdown/Dropdown";
-import abouts from "../../abouts.json";
+import abouts from "../../data/abouts.json";
 import styles from "./About.module.scss";
 
 function About() {
